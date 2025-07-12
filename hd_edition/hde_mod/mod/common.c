@@ -90,13 +90,13 @@ void __stdcall hooked_screen_refresh(int a1, int a2, int a3, int a4)
 void common_init(void)
 {
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    // screen_refresh: 89 4C 24 10 74 1A
+    // screen_refresh: 89 4C 24 10 74 0B
     ///////////////////////////////////////////////////////////////////////////////////////////////
     unsigned char mem_screen_refresh[] = {
         0x89, 0x4C, 0x24, 0x10, // MOV DWORD PTR SS : [ESP + 10], ECX
-        0x74, 0x1A              // JE SHORT <+0x1A>
+        0x74, 0x0B              // JE SHORT <+0x0B>
     };
-    int off_screen_refresh = -0x1E;
+    int off_screen_refresh = -0x10;
 
     HOOK_NEEDLE_FAIL_MSG(NULL, screen_refresh);
 }
