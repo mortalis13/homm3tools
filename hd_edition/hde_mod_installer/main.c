@@ -17,9 +17,15 @@
 #define STEAMEXE L"Steam.exe"
 // Subpath to HDE in Steam path
 #define HDESUBPATH L"steamapps\\common\\Heroes of Might & Magic III - HD Edition"
+
 // "Common" HDE paths. User can still browse manually if different
-#define HDEGUESS32 L"C:\\Program Files\\Steam\\steamapps\\common\\Heroes of Might & Magic III - HD Edition\\" HDESUBPATH
-#define HDEGUESS64 L"C:\\Program Files (x86)\\Steam\\steamapps\\common\\Heroes of Might & Magic III - HD Edition\\" HDESUBPATH
+#define HDEGUESS_1 L"C:\\Program Files\\Steam\\" HDESUBPATH
+#define HDEGUESS_2 L"C:\\Program Files (x86)\\Steam\\" HDESUBPATH
+#define HDEGUESS_3 L"D:\\Program Files\\Steam\\" HDESUBPATH
+#define HDEGUESS_4 L"D:\\Program Files (x86)\\Steam\\" HDESUBPATH
+#define HDEGUESS_5 L"C:\\Games\\Heroes of Might & Magic III - HD Edition"
+#define HDEGUESS_6 L"D:\\Games\\Heroes of Might & Magic III - HD Edition"
+
 // Files/folders to install
 LPCWSTR INSTALLFILES[] = {
     L"gzip_utils.dll",
@@ -44,14 +50,34 @@ static BOOL _AutodetectHDEPath(OUT LPWSTR lpHDEPath, IN int iMaxLength)
     }
 
     // Look for "common" 32/64 bit paths for HDE
-    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS64))
+    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS_1))
     {
-        lstrcpynW(lpHDEPath, HDEGUESS64, iMaxLength);
+        lstrcpynW(lpHDEPath, HDEGUESS_1, iMaxLength);
         return TRUE;
     }
-    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS32))
+    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS_2))
     {
-        lstrcpynW(lpHDEPath, HDEGUESS32, iMaxLength);
+        lstrcpynW(lpHDEPath, HDEGUESS_2, iMaxLength);
+        return TRUE;
+    }
+    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS_3))
+    {
+        lstrcpynW(lpHDEPath, HDEGUESS_3, iMaxLength);
+        return TRUE;
+    }
+    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS_4))
+    {
+        lstrcpynW(lpHDEPath, HDEGUESS_4, iMaxLength);
+        return TRUE;
+    }
+    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS_5))
+    {
+        lstrcpynW(lpHDEPath, HDEGUESS_5, iMaxLength);
+        return TRUE;
+    }
+    if (INVALID_FILE_ATTRIBUTES != GetFileAttributesW(HDEGUESS_6))
+    {
+        lstrcpynW(lpHDEPath, HDEGUESS_6, iMaxLength);
         return TRUE;
     }
 
@@ -136,4 +162,3 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
     ExitProcess(0);
 }
-
