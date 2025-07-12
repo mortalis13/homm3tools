@@ -537,7 +537,7 @@ void hero_trade_init(void)
     };
     int off_swapmgr_artifact_stats_update = -0x0D;
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    // swapmgr_display: 8B 94 C3 29 01 00 00 8D 34 C3
+    // swapmgr_display: BF 01 00 00 00 74 11 80 79 10 00 74 0B
     ///////////////////////////////////////////////////////////////////////////////////////////////
     unsigned char mem_swapmgr_display[] = {
         0xBF, 0x01, 0x00, 0x00, 0x00,   // MOV EDI, 1
