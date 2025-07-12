@@ -216,7 +216,7 @@ void __declspec(naked) hooked_inputmgr_func(void)
     __asm MOV inp, EAX
     if (FALSE != f_enable_enter_mgr_hook
         // seems game never comes here when not in foreground
-        && HDE_KEYUP == inp->state && VK_ESCAPE == inp->vk)
+        && HDE_KEYUP == inp->state && VK_RETURN == inp->vk)
     {
         f_do_battle_replay = TRUE;
         if (NULL != var_spell_casted)
