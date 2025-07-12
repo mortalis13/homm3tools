@@ -13,8 +13,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\analyze_road_or_river.c" />
     <ClCompile Include="..\..\gen_tile_sprites.c" />
-    <ClCompile Include="..\..\river\dispatch_river.c" />
-    <ClCompile Include="..\..\road\dispatch_road.c" />
+    <ClCompile Include="..\..\dispatch_road_or_river.c" />
     <ClCompile Include="..\..\terrain\analyze_terrain.c" />
     <ClCompile Include="..\..\terrain\dispatch_terrain.c" />
     <ClCompile Include="..\..\win\advapi_rand.c" />
@@ -25,8 +24,7 @@
     <ClInclude Include="..\..\crossplatform.h" />
     <ClInclude Include="..\..\gen_tile_sprites.h" />
     <ClInclude Include="..\..\h3m_tile.h" />
-    <ClInclude Include="..\..\river\dispatch_river.h" />
-    <ClInclude Include="..\..\road\dispatch_road.h" />
+    <ClInclude Include="..\..\dispatch_road_or_river.h" />
     <ClInclude Include="..\..\terrain\analyze_terrain.h" />
     <ClInclude Include="..\..\terrain\borderless.h" />
     <ClInclude Include="..\..\terrain\border_dirt.h" />

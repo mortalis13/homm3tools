@@ -15,11 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\river\dispatch_river.c">
-      <Filter>river</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\road\dispatch_road.c">
-      <Filter>road</Filter>
+    <ClCompile Include="..\..\dispatch_road_or_river.c">
+      <Filter>road_or_river</Filter>
     </ClCompile>
     <ClCompile Include="..\..\terrain\analyze_terrain.c">
       <Filter>terrain</Filter>
@@ -37,11 +34,8 @@
     <ClCompile Include="..\..\gen_tile_sprites.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\river\dispatch_river.h">
-      <Filter>river</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\road\dispatch_road.h">
-      <Filter>road</Filter>
+    <ClInclude Include="..\..\dispatch_road_or_river.h">
+      <Filter>road_or_river</Filter>
     </ClInclude>
     <ClInclude Include="..\..\terrain\analyze_terrain.h">
       <Filter>terrain</Filter>
