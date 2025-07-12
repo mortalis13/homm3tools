@@ -65,3 +65,10 @@ Temporary Items
 *.o
 *.so
 *.h3c
+
+# Visual Studio
+UpgradeLog.htm
+
+# Qt
+**/GeneratedFiles/Debug
+**/GeneratedFiles/Release
